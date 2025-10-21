@@ -1,0 +1,182 @@
+.anuncios-container {
+    display: flex;
+    gap: 2%;
+    font-family: Arial, sans-serif;
+  
+    .create-section {
+        flex: 0 0 55%; 
+        width: 65vw;
+        height: 90vh;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+      header h1 {
+        color: #1e90ff;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        flex: 1;
+        width: 85%;
+        margin-top: 5%;
+  
+        label {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+          color: #333;
+          font-size: 1rem;
+          gap: 8px;
+        }
+  
+        input, textarea, select {
+          padding: 0.75rem;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          background-color: #ffffff;
+          color: black;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size: 1rem;
+        }
+  
+        textarea {
+          resize: vertical;
+          min-height: 150px;
+        }
+  
+        button {
+          margin-top: auto;
+          background-color: #1e90ff;
+          color: #fff;
+          padding: 1rem 1.5rem;
+          border: none;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.2s;
+          font-size: 1.1rem;
+  
+          &:hover {
+            background-color: #1d7ad8;
+          }
+        }
+      }
+    }
+  
+    .preview-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 100%;
+  
+      .preview {
+        flex: 1; // metade do lado direito
+        background-color: #fff9f9;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px dashed #d32f2f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        header h2 {
+          color: #d32f2f;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+  
+        .anuncio-preview h3 {
+          color: #d32f2f;
+          margin-bottom: 0.5rem;
+        }
+  
+        .anuncio-preview p {
+          margin-bottom: 0.25rem;
+        }
+  
+        .anuncio-preview .created-by {
+          font-size: 0.85rem;
+          color: #555;
+        }
+  
+        .anuncio-preview time {
+          font-size: 0.85rem;
+          color: #333;
+        }
+      }
+  
+      .anuncios-list {
+        flex: 1; // metade inferior do lado direito
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+  
+        header h2 {
+          color: #d32f2f;
+          margin-bottom: 0.5rem;
+          font-size: 1.3rem;
+        }
+  
+        .scroll {
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          flex: 1;
+  
+          .anuncio {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            background-color: #fafafa;
+  
+            h3 {
+              color: #d32f2f;
+              margin-bottom: 0.25rem;
+            }
+  
+            p {
+              margin-bottom: 0.25rem;
+            }
+  
+            time {
+              font-size: 0.85rem;
+              color: #333;
+            }
+  
+            .created-by {
+              font-size: 0.8rem;
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Responsivo */
+  @media (max-width: 1024px) {
+    .anuncios-container {
+      flex-direction: column;
+  
+      .create-section,
+      .preview-section {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
